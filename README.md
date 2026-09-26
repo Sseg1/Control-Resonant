@@ -15,6 +15,17 @@ The Arabic font patch (Adobe Naskh Medium) must already be installed.
 
 The files were rebuilt from the original English `base-en` and `stream0-en` packs of this game version. A game update that changes those packs means they have to be rebuilt.
 
+## Bigger Arabic font (optional)
+
+Two enlarged versions of the Arabic font patch are included: `font_bigger_20` (+20%) and `font_bigger_30` (+30%). `font_size_preview.png` compares them with the current size. Pick one and copy its 2 files into the game, replacing the existing ones:
+
+- `data_pack2\pc\base-generic.rmdtoc` goes to `D:\games\CONTROL Resonant\data_pack2\pc\`
+- `data_pack2\generic\base-generic-000.rmdblob` goes to `D:\games\CONTROL Resonant\data_pack2\generic\`
+
+Always copy both files from the same folder. The two files belong together.
+
+To go back to the previous font size, copy back the two files uploaded to the `main` branch (`base-generic.rmdtoc` goes to `pc`, `base-generic-000.rmdblob` goes to `generic`).
+
 ## Uninstall
 
 Copy the original files back from `D:\games\CONTROL Resonant\_backup_before_arabic_patch\`.
@@ -34,3 +45,5 @@ cd work && python3 loc/assemble.py
 ```
 
 The rebuilt files are written to `work/loc/build/data_pack2/pc/`.
+
+To make the font a different size, run `python3 font_scale.py <folder with the installed base-generic files> <output folder> <factor>` from `work`. For example, a factor of `1.25` makes it 25% bigger.
