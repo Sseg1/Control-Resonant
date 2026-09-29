@@ -15,6 +15,12 @@ The Arabic font patch (Adobe Naskh Medium) must already be installed.
 
 The files were rebuilt from the original English `base-en` and `stream0-en` packs of this game version. A game update that changes those packs means they have to be rebuilt.
 
+## Easiest install (recommended)
+
+`install/` has one zip per font size: `Arabic_normal.zip`, `Arabic_plus20.zip` and `Arabic_plus30.zip`. Each zip already contains the right folder layout (`data_pack2\pc\…` and `data_pack2\generic\…`), with the line-order fix and the matching font. Extract it straight into `D:\games\CONTROL Resonant\` and choose "Replace" for every file. Nothing can end up in the wrong folder.
+
+Careful: `data_pack2\pc\` also has a large game file named `base-generic-000.rmdblob` (about 6.2 GB). The small font file with the same name belongs in `data_pack2\generic\`. If the large one is ever overwritten, the game won't start. Use "Verify integrity of game files" in Steam or Epic to repair it, then install again.
+
 ## Line-order fix and speaker names (test)
 
 When Arabic text wraps onto 2 or more lines, the game puts the lines in the wrong order, so you have to read from the bottom line up. `line_order_fix/data_pack2/pc/` holds the same 4 files, rebuilt so the lines come out in normal reading order:
