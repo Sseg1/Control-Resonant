@@ -15,6 +15,12 @@ The Arabic font patch (Adobe Naskh Medium) must already be installed.
 
 The files were rebuilt from the original English `base-en` and `stream0-en` packs of this game version. A game update that changes those packs means they have to be rebuilt.
 
+## Line-order fix (test)
+
+When Arabic text wraps onto 2 or more lines, the game puts the lines in the wrong order, so you have to read from the bottom line up. `line_order_fix/data_pack2/pc/` holds the same 4 files, rebuilt so the lines come out in normal reading order. The fix puts every word in its own run of text. It uses a style tag that looks identical on screen, because all 4 installed Arabic fonts are the same.
+
+Install it exactly like the main files. If anything looks wrong, copy the 4 files from `data_pack2/pc/` back to restore the current version.
+
 ## Bigger Arabic font (optional)
 
 Two enlarged versions of the Arabic font patch are included: `font_bigger_20` (+20%) and `font_bigger_30` (+30%). `font_size_preview.png` compares them with the current size. Pick one and copy its 2 files into the game, replacing the existing ones:
