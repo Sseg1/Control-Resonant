@@ -17,7 +17,9 @@ The files were rebuilt from the original English `base-en` and `stream0-en` pack
 
 ## Line-order fix (test)
 
-When Arabic text wraps onto 2 or more lines, the game puts the lines in the wrong order, so you have to read from the bottom line up. `line_order_fix/data_pack2/pc/` holds the same 4 files, rebuilt so the lines come out in normal reading order. The fix puts every word in its own run of text. It uses a style tag that looks identical on screen, because all 4 installed Arabic fonts are the same.
+When Arabic text wraps onto 2 or more lines, the game puts the lines in the wrong order, so you have to read from the bottom line up. `line_order_fix/data_pack2/pc/` holds the same 4 files, rebuilt so the lines come out in normal reading order:
+- Text shown in widgets that read markup: every word gets its own style tag. This looks identical on screen, because all 4 installed Arabic fonts are the same.
+- Plain-text widgets (subtitles, menus): each line is wrapped in invisible bidi control characters (RLE … PDF), with an invisible LRM mark between words.
 
 Install it exactly like the main files. If anything looks wrong, copy the 4 files from `data_pack2/pc/` back to restore the current version.
 
