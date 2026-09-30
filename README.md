@@ -21,11 +21,13 @@ The files were rebuilt from the original English `base-en` and `stream0-en` pack
 
 Careful: `data_pack2\pc\` also has a large game file named `base-generic-000.rmdblob` (about 6.2 GB). The small font file with the same name belongs in `data_pack2\generic\`. If the large one is ever overwritten, the game won't start. Use "Verify integrity of game files" in Steam or Epic to repair it, then install again.
 
-## Line-order fix
+## Line-order fix and speaker names
 
 When Arabic text wraps onto 2 or more lines, the game puts the lines in the wrong order, so you have to read from the bottom line up. `line_order_fix/data_pack2/pc/` holds the same 4 files with a fix for the screens that support text styling (warnings, descriptions, tutorials). There, every word gets its own style tag. That looks identical on screen, because all 4 installed Arabic fonts are the same. This fix is included in the `install/` zips.
 
-Plain-text screens (subtitles, menu items) are left exactly as in the first build. An earlier attempt to fix them put an invisible separator between words, and it reversed the word order inside each line, so it was removed.
+Plain-text screens (subtitles, menu items) keep the text exactly as in the first build. An earlier attempt to fix them put an invisible separator between words, and it reversed the word order inside each line, so it was removed.
+
+Speaker names: the game draws its speaker label on the left of the subtitle. These files blank that label and start every subtitle with the speaker's name instead («زوي: …»), so the name is on the right, where Arabic reading starts. The name is shown in white, because subtitles can't be coloured. It shows whatever the game's «أسماء المتحدثين في الترجمة» option is set to.
 
 ## Bigger Arabic font (optional)
 
