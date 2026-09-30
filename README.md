@@ -15,6 +15,10 @@ The Arabic font patch (Adobe Naskh Medium) must already be installed.
 
 The files were rebuilt from the original English `base-en` and `stream0-en` packs of this game version. A game update that changes those packs means they have to be rebuilt.
 
+## Share with a friend
+
+`CONTROL_Resonant_Arabic.zip` is a single ready-to-share package: the +20% font, the latest text files and an Arabic install guide («اقرأني - طريقة التثبيت.txt»). Your friend's game must be the same version.
+
 ## Easiest install (recommended)
 
 `install/` has one zip per font size: `Arabic_normal.zip`, `Arabic_plus20.zip` and `Arabic_plus30.zip`. Each zip already contains the right folder layout (`data_pack2\pc\…` and `data_pack2\generic\…`), with the line-order fix and the matching font. Extract it straight into `D:\games\CONTROL Resonant\` and choose "Replace" for every file. Nothing can end up in the wrong folder.
