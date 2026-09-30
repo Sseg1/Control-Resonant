@@ -21,23 +21,15 @@ The files were rebuilt from the original English `base-en` and `stream0-en` pack
 
 Careful: `data_pack2\pc\` also has a large game file named `base-generic-000.rmdblob` (about 6.2 GB). The small font file with the same name belongs in `data_pack2\generic\`. If the large one is ever overwritten, the game won't start. Use "Verify integrity of game files" in Steam or Epic to repair it, then install again.
 
-## Line-order fix and speaker names (test)
+## Line-order fix
 
-When Arabic text wraps onto 2 or more lines, the game puts the lines in the wrong order, so you have to read from the bottom line up. `line_order_fix/data_pack2/pc/` holds the same 4 files, rebuilt so the lines come out in normal reading order:
-- Text in widgets that read markup: every word gets its own style tag. This looks identical on screen, because all 4 installed Arabic fonts are the same.
-- Plain-text widgets (subtitles, menus): an invisible character (Hebrew alef U+05D0) goes between words. The font patch draws it as an empty, zero-width glyph. It works because the game splits text into separate runs wherever the script changes, which makes every word its own right-to-left run.
-- Every subtitle now starts with the speaker's name, so the name sits on the right. In the game's options, turn off «أسماء المتحدثين في الترجمة» so the name isn't shown twice.
+When Arabic text wraps onto 2 or more lines, the game puts the lines in the wrong order, so you have to read from the bottom line up. `line_order_fix/data_pack2/pc/` holds the same 4 files with a fix for the screens that support text styling (warnings, descriptions, tutorials). There, every word gets its own style tag. That looks identical on screen, because all 4 installed Arabic fonts are the same. This fix is included in the `install/` zips.
 
-**This fix needs the updated font files.** Install the 4 files from `line_order_fix/data_pack2/pc/` like the main files. Then install the 2 files from the font folder you use:
-- `font_normal`: normal size
-- `font_bigger_20`: +20%
-- `font_bigger_30`: +30%
-
-If you skip the font files, a visible «א» appears between words.
+Plain-text screens (subtitles, menu items) are left exactly as in the first build. An earlier attempt to fix them put an invisible separator between words, and it reversed the word order inside each line, so it was removed.
 
 ## Bigger Arabic font (optional)
 
-The Arabic font patch comes in three sizes: `font_normal` (normal size), `font_bigger_20` (+20%) and `font_bigger_30` (+30%). All three include the invisible word separator. `font_size_preview.png` compares them with the current size. Pick one and copy its 2 files into the game, replacing the existing ones:
+The Arabic font patch comes in three sizes: `font_normal` (normal size), `font_bigger_20` (+20%) and `font_bigger_30` (+30%). `font_size_preview.png` compares them with the current size. Pick one and copy its 2 files into the game, replacing the existing ones:
 
 - `data_pack2\pc\base-generic.rmdtoc` goes to `D:\games\CONTROL Resonant\data_pack2\pc\`
 - `data_pack2\generic\base-generic-000.rmdblob` goes to `D:\games\CONTROL Resonant\data_pack2\generic\`
